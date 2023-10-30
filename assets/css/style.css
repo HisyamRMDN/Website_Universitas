@@ -187,14 +187,6 @@ section .container{
 	margin: 5px auto;
 }
 
-.divider{
-	height: 4px;
-	width: 100px;
-	background: linear-gradient(90deg, rgba(30,144,255,0.5) 0%, rgba(0,212,255,1) 100%);
-	margin: 5px auto;
-
-}
-
 .image-size img{
 	border-radius: 20px;
 }

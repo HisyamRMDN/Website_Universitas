@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Website Universitas</title>
+    <link rel="icon" type="image/x-icon" href="/assets/img/bsi.png">
     <link rel="stylesheet" href="/assets/css/style.css">
     <link rel="stylesheet" href="/assets/css/contact.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
@@ -14,6 +15,7 @@
     <link href="./assets/font-awesome/css/fontawesome.css" rel="stylesheet">
     <link href="./assets/font-awesome/css/brands.css" rel="stylesheet">
     <link href="./assets/font-awesome/css/solid.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
     <!-- font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -115,14 +117,19 @@
                         </li>
                     </ul>
                     <div class="button-header">
-                        <a href="https://play.google.com/store/apps/details?id=com.pmbubsi2024dip.dipubsi5v&hl=en-ID" target="blank">
-                            <button class="daftar btn-style" role="button" >Registrasi</button>
+                        <a href="https://play.google.com/store/apps/details?id=com.pmbubsi2024dip.dipubsi5v&hl=en-ID"
+                            target="blank">
+                            <button class="daftar btn-style" role="button">Registrasi</button>
                         </a>
                     </div>
                 </div>
             </div>
         </nav>
     </header>
+
+    <a href="#" class="back-to-top">
+		<span class="material-icons">arrow_upward</span>
+	</a>
 
     <section class="contact-item">
         <div class="content" data-aos="fade-up" data-aos-duration="1000">
@@ -160,27 +167,44 @@
                 <form action="">
                     <h2>Kirim Pesan</h2>
                     <div class="input-box">
-                        <input type="text" name="" required>
+                        <input type="text" id="name" name="" required>
                         <span>Nama Lengkap</span>
                     </div>
                     <div class="input-box">
-                        <input type="text" name="" required>
+                        <input type="text" id="email" name="" required>
                         <span>E-mail</span>
                     </div>
                     <div class="input-box">
-                        <textarea name="" id="" cols="30" rows="3" required></textarea>
+                        <textarea name="" id="msg" cols="30" rows="3" required></textarea>
                         <span>Ketik Pesan...</span>
                     </div>
                     <div class="input-box">
-                        <input  class="button" type="submit" name="" value="Send">
+                        <button class="button" type="button" name="" value="Send" onclick="message()">SEND</button>
                     </div>
                 </form>
             </div>
         </div>
     </section>
 
+    <div class="popup-alert" id="alert">
+        <img src="/assets/img/checks.png" alt="">
+        <h2>Thank You</h2>
+        <p>Komentar Anda Telah Berhasil DiKirim.</p>
+        <button type="button" onclick="closePopup()">OK</button>
+    </div>
+
+    <div class="warning-alert" id="warning-alert">
+        <img src="/assets/img/cancel.png" alt="">
+        <h2>Sorry</h2>
+        <p>Please Fill Out The Required Fields.</p>
+        <button type="button" onclick="closePopup(), window.location.reload()">OK</button>
+    </div>
+
     <div class="contact-map" data-aos="fade-up" data-aos-duration="1000">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.437501158542!2d107.01310557355407!3d-6.2058781607880285!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e698bddb90ba0e5%3A0x6ca31bc5f1daa29e!2sBina%20Sarana%20Informatika!5e0!3m2!1sen!2sid!4v1698566002891!5m2!1sen!2sid" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.437501158542!2d107.01310557355407!3d-6.2058781607880285!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e698bddb90ba0e5%3A0x6ca31bc5f1daa29e!2sBina%20Sarana%20Informatika!5e0!3m2!1sen!2sid!4v1698566002891!5m2!1sen!2sid"
+            width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
 
     <footer class="bg-light text-dark pt-5 pb-4">
@@ -192,13 +216,16 @@
                 </div>
                 <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3" style="width: 45%;">
                     <h5 class="text-uppercase mb-4 text-warning">Universitas BSI</h5>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, dicta, tenetur velit, a consequuntur praesentium ipsam vero maiores adipisci magni dignissimos provident deleniti ab error! Error dolorem tempora illo dolorum.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, dicta, tenetur velit, a
+                        consequuntur praesentium ipsam vero maiores adipisci magni dignissimos provident deleniti ab
+                        error! Error dolorem tempora illo dolorum.</p>
                 </div>
 
                 <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
                     <h5 class="text-uppercase mb-4 text-warning">contact</h5>
                     <p>
-                        <i class="fa fa-home">Jl. Raya Kaliabang No.8, Perwira, Kec. Bekasi Utara, Kota Bks, Jawa Barat 17122</i>
+                        <i class="fa fa-home">Jl. Raya Kaliabang No.8, Perwira, Kec. Bekasi Utara, Kota Bks, Jawa Barat
+                            17122</i>
                     </p>
                     <p>
                         <i class="fa fa-envelope">BsiPmb@gmail.com</i>
@@ -218,9 +245,10 @@
             <div class="row align-items-center">
                 <div class="col-md-7 col-lg-8">
                     <p>Copyright &copy;2023 All Rights Reserved By :
-                    <a href="#" class="text-decoration-none" >
-                        <strong class="text-warning" >The Creator</strong>
-                    </a></p>
+                        <a href="#" class="text-decoration-none">
+                            <strong class="text-warning">The Creator</strong>
+                        </a>
+                    </p>
                 </div>
 
                 <div class="col-md-5 col-lg-4">
@@ -241,20 +269,21 @@
                             <li class="list-inline-item">
                                 <a href="#"><i class="fa fa-linkedin"></i></a>
                             </li>
-                            
-                            
+
+
                         </ul>
                     </div>
                 </div>
             </div>
         </div>
-        
+
     </footer>
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="assets/js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 
 </html>

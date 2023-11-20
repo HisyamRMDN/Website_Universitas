@@ -103,6 +103,9 @@
 
 .button {
     appearance: button;
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
     background-color: #1899D6;
     border: solid transparent;
     border-radius: 16px;
@@ -145,7 +148,7 @@
     z-index: -1;
 }
 
-.button:main, .button:focus {
+.button, .button:focus {
     user-select: auto;
 }
 
@@ -162,6 +165,220 @@
 }
 
 .button:active {
+    padding-bottom: 10px;
+}
+
+.popup-alert{
+    width: 400px;
+    background: #fff;
+    border-radius: 6px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%)scale(0.1);
+    text-align: center;
+    padding: 0 30px 30px;
+    color:#333 ;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.8);
+    visibility: hidden;
+    transition: transform 0.4s, top 0.4s;
+}
+
+.open-popup{
+    top: 50%;
+    visibility: visible;
+    transform: translate(-50%, -50%)scale(0.9);
+    position: fixed;
+    z-index: 9999;
+}
+
+.popup-alert p{
+    margin: 20px 34px;
+}
+
+.popup-alert img{
+    width: 100px;
+    margin-top: -50px;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.popup-alert h2{
+    font-size: 38px;
+    font-weight: 500;
+    margin: 30px 0 10px;
+}
+
+.popup-alert button{
+    appearance: button;
+    width: 100%;
+    background-color: #1899D6;
+    border: solid transparent;
+    border-radius: 16px;
+    border-width: 0 0 4px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: .8px;
+    line-height: 20px;
+    margin: 0;
+    outline: none;
+    overflow: visible;
+    padding: 13px 19px;
+    text-align: center;
+    text-transform: uppercase;
+    touch-action: manipulation;
+    transform: translateZ(0);
+    transition: filter .2s;
+    user-select: none;
+    -webkit-user-select: none;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+
+.popup-alert button:after {
+    background-clip: padding-box;
+    background-color: #1CB0F6;
+    border: solid transparent;
+    border-radius: 16px;
+    border-width: 0 0 4px;
+    bottom: -4px;
+    content: "";
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -1;
+}
+
+.popup-alert button, button:focus {
+    user-select: auto;
+}
+
+.popup-alert button:hover:not(:disabled) {
+    filter: brightness(1.1);
+}
+
+.popup-alert button:disabled {
+    cursor: auto;
+}
+
+.popup-alert button:active:after {
+    border-width: 0 0 0px;
+}
+
+.popup-alert button:active {
+    padding-bottom: 10px;
+}
+
+/* warning */
+
+.warning-alert{
+    width: 400px;
+    background: #fff;
+    border-radius: 6px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%)scale(0.1);
+    text-align: center;
+    padding: 0 30px 30px;
+    color:#333 ;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.8);
+    visibility: hidden;
+    transition: transform 0.4s, top 0.4s;
+}
+
+.warning-popup{
+    top: 50%;
+    visibility: visible;
+    transform: translate(-50%, -50%)scale(0.9);
+    position: fixed;
+    z-index: 9999;
+}
+
+.warning-alert p{
+    margin: 20px 34px 20px 55px;
+}
+
+.warning-alert img{
+    width: 100px;
+    margin-top: -50px;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.warning-alert h2{
+    font-size: 38px;
+    font-weight: 500;
+    margin: 30px 0 10px;
+}
+
+.warning-alert button{
+    appearance: button;
+    width: 100%;
+    background-color: #1899D6;
+    border: solid transparent;
+    border-radius: 16px;
+    border-width: 0 0 4px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: .8px;
+    line-height: 20px;
+    margin: 0;
+    outline: none;
+    overflow: visible;
+    padding: 13px 19px;
+    text-align: center;
+    text-transform: uppercase;
+    touch-action: manipulation;
+    transform: translateZ(0);
+    transition: filter .2s;
+    user-select: none;
+    -webkit-user-select: none;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+
+.warning-alert button:after {
+    background-clip: padding-box;
+    background-color: #1CB0F6;
+    border: solid transparent;
+    border-radius: 16px;
+    border-width: 0 0 4px;
+    bottom: -4px;
+    content: "";
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -1;
+}
+
+.warning-alert button, button:focus {
+    user-select: auto;
+}
+
+.warning-alert button:hover:not(:disabled) {
+    filter: brightness(1.1);
+}
+
+.warning-alert button:disabled {
+    cursor: auto;
+}
+
+.warning-alert button:active:after {
+    border-width: 0 0 0px;
+}
+
+.warning-alert button:active {
     padding-bottom: 10px;
 }
 
